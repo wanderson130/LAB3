@@ -1,4 +1,4 @@
-#include "conta.hpp"
+#include "../include/q2/conta.hpp"
 
 /** Funcao que e responsavel pelo cadastro de contas nos sistema */
 void CadastroConta::carregarDados() {

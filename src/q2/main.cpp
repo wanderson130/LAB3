@@ -1,5 +1,5 @@
 #include<iostream>
-#include "conta.hpp"
+#include "../include/q2/conta.hpp"
 
 int main (){
 	CadastroConta nova;
