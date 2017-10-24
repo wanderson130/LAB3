@@ -10,6 +10,8 @@
 #include <cstdlib> 
 
 using namespace std;
+
+/** Classe Conta */
 class Conta
 {
 private:
@@ -47,6 +49,7 @@ public:
 	float getLimite(){return this->limite;}
 };
 
+/** Classe Responsavel pelas operações em conta */
 class CadastroConta {
 private:
   vector<Conta*> lista;

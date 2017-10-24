@@ -7,6 +7,7 @@
 using std::string;
 using std::ostream;
 
+/** Classe Fruta */
 class Fruta : public Produto
 {
 	public:
