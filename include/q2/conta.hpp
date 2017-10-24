@@ -56,7 +56,9 @@ public:
   //~CadastroConta();
   void criarConta(); //inserir func
   void buscaConta(std::string numero);
-  //void transferencia(string::numero); //saque, deposito, contas
+  void depositoConta(std::string numero); 
+  //void saqueConta(std::string numero); 
+  //void transferencia(std::string numero);  
   void imprimirConta();
   //void escrever(ostream& out) const;
  

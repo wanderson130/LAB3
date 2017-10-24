@@ -1,31 +1,38 @@
-#ifndef _PRODUTO_H_
-#define _PRODUTO_H_
+#ifndef PRODUTO_H_
+#define PRODUTO_H_
 
 #include <iostream>
+#include <ostream>
+#include <string>
+using std::string;
+using std::ostream;
 
 class Produto
 {
-public:
-	Produto();
-	Produto(std::string _codigo, std::string _descricao, short _preco);
-	virtual ~Produto();
-protected:
-	std::string m_cod_barras;
-	std::string m_descricao;
-	double m_preco;		
-public:
-	// getters
-	std::string getCodBarras();
-	std::string getDescricao();
-	double getPreco();
-	// setters
-	void setCodBarras(std::string _codigo);
-	void setDescricao(std::string _descricao);
-	void setPreco(double _preco);
-	//
-	friend std::ostream& operator<< (std::ostream &o, Produto const &t);  
-private:
-	virtual std::ostream& print(std::ostream&) const = 0;
+	public:
+		Produto();
+		Produto(string _cod_barras, string _descricao, float _preco);
+		virtual ~Produto();
+	
+	protected:
+		string cod_barras;	
+		string descricao;
+		double preco;
+
+	private:
+		virtual ostream& print(ostream&) const = 0;
+
+	public:
+		// getters
+		string getCodBarras();
+		string getDescricao();
+		double getPreco();
+		// setters
+		void setCodBarras(string _cod_barras);
+		void setDescricao(string _descricao);
+		void setPreco(double _preco);
+		//
+		friend ostream& operator<< (ostream &o, Produto const &t);
 };
  
 #endif

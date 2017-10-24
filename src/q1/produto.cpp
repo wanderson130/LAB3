@@ -1,43 +1,48 @@
-#include <iostream>
 #include "../include/q1/produto.h"
 
-Produto::Produto() {}
+#include <iostream>
+#include <string>
+using std::string;
 
-Produto::~Produto(){}
 
-Produto::Produto(std::string _codigo, std::string _descricao, short _preco):
-	m_cod_barras(_codigo), m_descricao(_descricao), m_preco(_preco) {}
+Produto::Produto(){
+//construtor padrao
+}
 
-std::string 
-Produto::getCodBarras() {
-	return m_cod_barras;
+Produto::Produto(string _cod_barras, string _descricao, float _preco){
+	cod_barras = _cod_barras;
+	descricao = _descricao;
+	preco = _preco; 
+}
+
+Produto::~Produto(){
+//destrutor
+}
+
+string Produto::getCodBarras(){
+	return cod_barras;
 }
 	
-std::string 
-Produto::getDescricao() {
-	return m_descricao;
+string Produto::getDescricao(){
+	return descricao;
 }
 
-double 
-Produto::getPreco() {
-	return m_preco;
+double Produto::getPreco(){
+	return preco;
 }
 	
-void 
-Produto::setCodBarras(std::string _codigo) {
-	m_cod_barras = _codigo;
+void Produto::setCodBarras(string _codigo){
+	cod_barras = _codigo;
 }
 
-void 
-Produto::setDescricao(std::string _descricao) {
-	m_descricao = _descricao;
+void Produto::setDescricao(std::string _descricao){
+	descricao = _descricao;
 }
 
-void 
-Produto::setPreco(double _preco) {
-	m_preco = _preco;
+void Produto::setPreco(double _preco){
+	preco = _preco;
 }
 
-std::ostream& operator<< (std::ostream &o, Produto const &p) {
+std::ostream& operator<< (std::ostream &o, Produto const &p){
 	return p.print(o);
 }

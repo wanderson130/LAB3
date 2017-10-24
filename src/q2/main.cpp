@@ -14,10 +14,11 @@ int main (){
   		cout << "(2) Carregar dados existentes" << endl;
   		cout << "(3) Exibir Conta" << endl;
 		cout << "(4) Buscar e remover funcionario por numero" << endl;
+		cout << "(5) Deposito" << endl;
   		cout << "(0) Sair" << endl;
 		cin >> opc;
 
- 	    while(opc > 5 or opc < 0) 
+ 	    while(opc > 6 or opc < 0) 
 		{
 			cout << "Informe uma opção valida: ";
 			cin >> opc;
@@ -44,6 +45,12 @@ int main (){
 					cout << "\nBuscar conta por numero.\n";
 					cin >> nome;
 					nova.buscaConta(nome);
+					cin.ignore().get();	
+				  break;	
+				case 5:	
+					cout << "\nBuscar conta por numero e faz deposito.\n";
+					cin >> nome;
+					nova.depositoConta(nome);
 					cin.ignore().get();	
 				  break;				
 				case 0:

@@ -237,3 +237,34 @@ void CadastroConta::buscaConta(std::string numero)
 		}
 	}
 }
+
+/** Funcao que deposita na conta pelo numero */
+void CadastroConta::depositoConta(std::string numero)
+{
+		
+	for(unsigned i = 0; i < lista.size(); i++)
+	{
+		if(numero == lista[i]->getNumero())
+		{
+			cout << "		 ------------------\n";
+			cout << "		| Conta Encontrada |\n";
+			cout << " 		 ------------------\n\n";
+	        cout << setw(20) << left << "Numero:"	  	<< "\t"	<< lista[i]->getNumero() << endl;
+	        cout << setw(20) << left << "Saldo:" 		<< "\t" << lista[i]->getSaldo() << endl;
+			
+			cout << setw(20) << left << "Valor para deposito:" << "\t" << endl;
+				float aux;
+				cin >> aux;	
+
+			//lista[i]->getSaldo = (lista[i]->getSaldo) + aux;			
+					
+			atualizarDados();
+			salvarDados();
+			
+			/* remove uma conta encontrado na posicao i */	
+			cout << setw(20) << left <<  "Deposito feito com sucesso" << endl;  
+			break;
+
+		}
+	}
+}
