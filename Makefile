@@ -26,7 +26,7 @@ all:	produtos contas
 debug: CFLAGS += -g -O0
 debug:	produtos contas
 
-# Alvo (target) para a construcao do executavel da q1
+# Alvo (target) para construcao do executavel da q1
 # Define os arquivos *.o como dependencias
 produtos: $(OBJ_DIR)/produto.o $(OBJ_DIR)/fruta.o $(OBJ_DIR)/bebida.o $(OBJ_DIR)/roupa.o $(OBJ_DIR)/main1.o
 	@echo "============="
